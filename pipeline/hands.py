@@ -1,0 +1,62 @@
+import numpy as np
+RADIUS = np.array([
+    0.05,    # PALM
+    0.05,    # WRIST
+    0.05,   # ThumbMetacarpal
+    0.04,   # ThumbProximal
+    0.03,   # ThumbDistal
+    0.02,   # ThumbTip
+    0.04,   # IndexMetacarpal
+    0.03,   # IndexProximal
+    0.02,   # IndexIntermediate
+    0.02,   # IndexDistal
+    0.01,   # IndexTip
+    0.04,   # MiddleMetacarpal
+    0.02,   # MiddleProximal
+    0.02,   # MiddleIntermediate
+    0.02,   # MiddleDistal
+    0.01,   # MiddleTip
+    0.04,   # RingMetacarpal
+    0.02,   # RingProximal
+    0.02,   # RingIntermediate
+    0.02,   # RingDistal
+    0.01,   # RingTip
+    0.04,   # PinkyMetacarpal
+    0.02,   # PinkyProximal
+    0.02,   # PinkyIntermediate
+    0.02,   # PinkyDistal
+    0.01,   # PinkyTip
+])
+
+FOCUS = 0.4
+
+class Hands:
+    PALM     = 0
+    WRIST    = 1
+    ThumbMetacarpal = 2
+    ThumbProximal = 3
+    ThumbDistal = 4
+    ThumbTip = 5
+    IndexMetacarpal = 6
+    IndexProximal = 7
+    IndexIntermediate = 8
+    IndexDistal = 9
+    IndexTip = 10
+    MiddleMetacarpal = 11
+    MiddleProximal = 12
+    MiddleIntermediate = 13
+    MiddleDistal = 14
+    MiddleTip = 15
+    RingMetacarpal = 16
+    RingProximal = 17
+    RingIntermediate = 18
+    RingDistal = 19
+    RingTip = 20
+    PinkyMetacarpal = 21
+    PinkyProximal = 22
+    PinkyIntermediate = 23
+    PinkyDistal = 24
+    PinkyTip = 25
+    N_JOINTS = 26
+    RADIUS   = RADIUS
+    FOCUS    = FOCUS
