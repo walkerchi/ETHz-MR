@@ -111,7 +111,8 @@ needed. For example:
 
 * `target_compile_options(DepthToPCD PRIVATE "/MT$<$<CONFIG:Release>:>")` to correctly link the Open3D library.
 * Directory to Boost and Open3D may need to be specified in order to be found.
-* [CPP/DirectXMath/Inc/sal.h](CPP/DirectXMath/Inc/sal.h) and [unsal.h](CPP/DirectXMath/Inc/sal.h) needs to be removed
+* [CPP/DirectXMath/Inc/sal.h](CPP/DirectXMath/Inc/sal.h) and [unsal.h](CPP/DirectXMath/Inc/sal.h) (as well
+  as `#include "unsal.h"` at the end of [DirectXMath.h](CPP/DirectXMath/Inc/DirectXMath.h)) needs to be removed
   for Windows. According to [Microsoft/DirectXMath](https://github.com/microsoft/DirectXMath), sal.h is needed for Linux
   and macOS. However, for Ubuntu, macros defined inside pollutes the standard library. Therefore, we add an unsal.h to
   undef them. For Windows, such changes should be undone.
@@ -188,3 +189,7 @@ add `-DDATA_FOLDER=...` to CMake command line argument.
   100% (not even a single core) and the processing frame rate is extremely low. The cause is unknown yet. Running a VM
   at the same time seems to solve the problem (reaching 500% CPU usage) but the solution is not confirmed yet. A
   possible reason is the out-of-date OpenMP library being used when compiling Open3D (newer version is not supported).
+
+## License
+
+The code is released under the MIT license.
